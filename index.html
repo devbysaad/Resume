@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Muhammad Saad</h1>
+      <p class="subtitle">|Junior Web Developer |</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate web developer and love building professional, user-friendly websites.</p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <h3>Frontend Developer</h3>
+         
+          <p>Built and maintained responsive websites for own projects.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Developer</h3>
+          <p>Self-Employed (2024 Sep-2024 Dec)</p>
+          <p>Designed websites and applications.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p id="confirmation" class="hidden">Thank you for reaching out!</p>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
