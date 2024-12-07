@@ -1,19 +1,33 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* Header */
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
+  animation: fadeInDown 1s;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #007BFF;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -21,35 +35,74 @@ header {
   color: #555;
 }
 
+/* Navigation */
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
+  margin: 0;
+  background: #007BFF;
+  border-radius: 8px;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #007BFF;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #ffdd40;
+}
+
+/* Sections */
 main section {
   margin: 20px 0;
+  animation: fadeInUp 1.2s;
+}
+
+main h2 {
+  font-size: 1.8em;
+  color: #007BFF;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
 }
 
 .skills-list {
-  list-style: square;
-  padding-left: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  padding: 15px 20px;
+  background: linear-gradient(145deg, #f1f1f1, #e0e0e0);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2), -4px -4px 16px #fff;
 }
 
 .experience-item {
   margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
 }
 
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
@@ -57,31 +110,46 @@ form {
 
 form label {
   margin-top: 10px;
+  font-weight: bold;
 }
 
 form input, form textarea, form button {
   padding: 10px;
   margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
   background-color: #007BFF;
   color: white;
   border: none;
+  font-weight: bold;
   cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-.hidden {
-  display: none;
+/* Confirmation Message */
+#confirmation {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 1s;
 }
 
-#confirmation {
-  margin-top: 10px;
-  color: green;
+.hidden {
+  display: none;
 }
 
 /* Animations */
